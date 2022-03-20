@@ -1,0 +1,25 @@
+<%= form_for(@book) do |form| %>
+    <%= form.label :isbn, style: "display: block" %>
+    <%= form.text_field :isbn %><br/>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %><br/>
+    <%= form.password_field :isbn, size: 10, maxlength: 15, disabled: true %><br/>
+    <%= form.text_area :isbn, cols:40, rows: 10 %><br/>
+    <label><%= form.radio_button :publish, '技術評論社', class: :rd %>技術評論社</label>
+    <label><%= form.radio_button :publish, '照英社', class: :rd %>照英社</label>
+    <label><%= form.radio_button :publish, '日経社', class: :rd %>日経社</label><br/>
+    <label><%= form.check_box :dl, {class: 'chk'}, 'yes', 'no' %>ダウンロードサンプルあり？</label><br/>
+    <%= form.hidden_field :isbn %>
+    <%= form.color_field :isbn %></br>
+    <%= form.date_field :published %></br>
+    <%= form.time_field :published %></br>
+    <%= form.datetime_field :published %></br>
+    <%= form.datetime_local_field :published %></br>
+    <%= form.month_field :published %></br>
+    <%= form.week_field :published %></br>
+    <%= form.email_field :isbn, size: 25, maxlength: 30 %></br>
+    <%= form.range_field :price, min: 0, max: 1000, step: 10 %></br>
+
+    
+
+<% end %>

@@ -1,0 +1,6 @@
+<%= form_with url: "/ajax/result", local: false do |f| %>
+  <%= f.collection_select :publish, @books, :publish, :publish %>
+  <%= f.submit '検索' %>
+<% end %>
+<!--ajaxの処理結果を反映-->
+<ul id="result"></ul>

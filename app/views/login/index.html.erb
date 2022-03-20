@@ -1,0 +1,17 @@
+<p style="color: Red">
+<%= @error %>
+<%= @msg %>
+</p>
+<%= form_with url: "/login/auth" do |form| %>
+  <div class="field">
+    <%= form.label :username, 'ユーザ名' %> : <br />
+    <%= form.text_field :username, size: 20 %>
+  </div>
+  <div class="field">
+    <%= form.label :password, 'パスワード' %><br />
+    <%= form.password_field :password, size: 20 %>
+  </div>
+  <!--ログイン後にリダイレクトすべきアクションを隠しフィールドにセット-->
+  <%= form.hidden_field :referer, value: flash[:referer] %>
+  <%= form.submit 'ログイン' %>
+<% end %>

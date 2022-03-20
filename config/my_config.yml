@@ -1,0 +1,14 @@
+COMMON: &COMMON
+  author: "KOBORI, Hirotaka"
+
+development:
+  hoge: "dev"
+  <<: *COMMON
+
+test:
+  hoge: "test"
+  <<: *COMMON
+
+production:
+  hoge: "pro"
+  <<: *COMMON

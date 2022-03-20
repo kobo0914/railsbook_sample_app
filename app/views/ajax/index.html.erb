@@ -1,0 +1,10 @@
+
+<div>現在時刻：<%= Time.now %></div>
+<div id="result">現在時刻：<%= Time.now %></div>
+<%= link_to '更新', { action: :upanel }, remote: true %>
+<p>jQuery稼働テスト</p>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("p").text("jQuery稼働テスト(稼働中)");
+  });
+</script>

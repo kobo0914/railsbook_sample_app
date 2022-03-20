@@ -1,0 +1,5 @@
+<%= form_with url: "/ctr/cookie_rec" do |f| %>
+  <%= f.label :email, 'メールアドレス：' %>
+  <%= f.text_field :email, value: @email, size: 50 %>
+  <%= f.submit '保存' %>
+<% end %>
